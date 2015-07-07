@@ -1,0 +1,68 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="inject.css" type="text/css">
+<script src="jquery-2.1.3.min.js" type="text/javascript"></script>
+<script src="bootstrap.min.js"></script>
+<script src="popup.js"></script>
+</head>
+
+<style type="text/css">
+</style>
+
+<div class="container-fluid">
+	<div id="strategyList">
+		<section id="singleDefaultSection">
+			<h3 class="title">默认值填充策略</h3>
+			<div class="row">
+				<div class="col-md-5">
+					<a class="btn btn-large btn-primary" id='singleDefaultBtn'>默认值填写所有input</a>
+				</div>
+				<div class="form-group col-md-1">
+              		<input type="text" placeholder="默认值" class="form-control" id="singleDefaultInput">
+            	</div>
+		</div>
+		</section>
+
+		<section id="udvSetSection">
+			<h3 class="title">用户定义表单组</h3>
+			<div class="row">
+				<div class="col-md-5">
+					<a class="btn btn-large btn-primary" id='storeUDVSetBtn'>存储当前表单填写的全部值</a>
+				</div>
+				<div class="form-group col-md-1" id="storeUDVSetDiv">
+				  <input type="text" placeholder="起个名字吧，英文数字下划线那种" class="form-control" id="storeUDVSetInput"></input>
+				</div>
+			</div>
+
+			<!--该区域显示全部用户存储的值，并给出删除入口-->
+			<div class="row" id="UDVSetDiv">
+			</div>
+			<div class="row" id="UDVSetDeleteDiv">
+				<div class="col-md-5">
+					<a class="btn btn-large btn-primary" id='deleteUDVSetBtn'>删除全部历史表单记录</a>
+				</div>
+			</div>
+
+		</section>
+
+		<!--<a class="btn btn-large btn-primary" id='autofillBtn'>autofill</a>-->
+		<!--<a class="btn btn-large btn-primary" id='localStTestBtn'>localStTest</a>-->
+		<!--<a class="btn btn-large btn-primary" id='localStTestBtn'>保存当前填写的值</a>-->
+		<!--
+		<a class="btn btn-large btn-primary" id='localStTestBtn'>localStTest</a>
+		-->
+		<!--各种策略区域-->
+		<section id="attackSection">
+			<h3 class="title">特定攻击策略组</h3>
+			<div class="row" id="StrategySetDiv">
+				<div class="col-md-5">
+					<a class="btn btn-large btn-primary" id='jsonConflictBtn'>JSON冲突策略</a>
+					<a class="btn btn-large btn-primary" id='lengthOverFlowBtn'>字符串超长策略</a>
+					<a class="btn btn-large btn-primary" id='queerCharsetBtn'>海外及特殊字符集策略</a>
+					<a class="btn btn-large btn-primary" id='xssBtn'>xss攻击策略</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
